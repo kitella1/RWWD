@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-    <img id="logo" alt="Mcintire Fruits logo" src="../assets/logo.png">
-    <Landing msg="Welcome to Your Vue.js App"/>
+  <div id="home">
+    <img id="logo" alt="Mcintire Fruits logo" src="../assets/images/logo-1x.png">
   </div>
 </template>
 
@@ -14,13 +13,10 @@
 </style>
 
 <script>
-// @ is an alias to /src
-import Landing from '@/components/Landing.vue'
 
 export default {
   name: 'Home',
   components: {
-    Landing
   }
 }
 </script>
