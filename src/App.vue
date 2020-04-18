@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <img id="logo" alt="Mcintire Fruits logo" src="@/assets/images/logo-1x.png">
+        <header>
+            <img id="logo" alt="Mcintire Fruits logo" src="@/assets/images/logo-1x.png">
+        </header>
         <mq-layout :mq="['smallMobile', 'mobile']">
             <router-view />
             <Footer/>

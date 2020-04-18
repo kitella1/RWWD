@@ -5,11 +5,12 @@
     "\\src\\assets",
     "\\src\\assets\\images",
     "\\src\\components",
-    "\\src\\components\\Produce",
+    "\\src\\components\\KidzZone",
+    "\\src\\components\\Shop",
     "\\src\\router",
-    "\\src\\scss",
-    "\\src\\views"
+    "\\src\\views",
+    "\\src\\views\\Shop"
   ],
-  "SelectedNode": "\\src\\components\\KidzZone",
+  "SelectedNode": "\\src\\assets\\images\\appleMuffin.png",
   "PreviewInSolutionExplorer": false
 }
