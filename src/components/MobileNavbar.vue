@@ -68,9 +68,9 @@
       </svg>
       <p>Home</p>
     </router-link>
-    <router-link @click.native="setActivePage('produce')" to="/produce">
+    <router-link @click.native="setActivePage('shop')" to="/shop">
       <svg
-        v-if="activePage === 'produce' | 'juice'"
+        v-if="activePage === 'shop' | 'produce' | 'merch' | 'products' | 'juices'"
         class="navIcon"
         id="bagIconFilled"
         height="20"
