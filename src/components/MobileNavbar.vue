@@ -235,29 +235,32 @@
 <style lang="scss" scoped>
 @media only screen and (min-width: 200px) {
   #nav {
-    background: $primaryAccent;
+    background: $primary;
     display: flex;
      justify-content: space-around;
      position: fixed;
      left: 0;
      bottom: 0;
      width: 100vw;
-     box-shadow: 0px 1px 25px 0px $shadowColour;
+     box-shadow: 0px 1px 25px 0px $shadow;
   }
-  a {    
-    font-weight: 400;
-    font-size: 0.6em;
-    color: $primaryWhite;
-    fill: $primaryWhite;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-transform: uppercase;
-    flex-basis: 0;
-    flex-grow: 1;
 
-    svg
+  .navIcon {
+      width: 1.7em;
+  }
+    a {
+        font-weight: 400;
+        font-size: 0.6em;
+        color: $white;
+        fill: $white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        flex-basis: 0;
+        flex-grow: 1;
+        svg
     {
       margin-top: 5px;
     }
@@ -268,7 +271,7 @@
       }
     }
     &.router-link-exact-active {
-      background: $secondaryAccent;
+        background: $primaryDark;
     }
   }
 }
