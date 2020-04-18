@@ -19,7 +19,27 @@ const routes = [
     path: '/shop',
     name: 'Shop',
     component: () => import(/* webpackChunkName: "produce" */ '../views/Shop.vue')
-  },
+    },
+    {
+        path: '/shop/juice',
+        name: 'Juice',
+        component: () => import(/* webpackChunkName: "juice" */ '../views/Shop/Juice.vue')
+    },
+    {
+        path: '/shop/product',
+        name: 'Product',
+        component: () => import(/* webpackChunkName: "product" */ '../views/Shop/Product.vue')
+    },
+    {
+        path: '/shop/produce',
+        name: 'Produce',
+        component: () => import(/* webpackChunkName: "produce" */ '../views/Shop/Produce.vue')
+    },
+    {
+        path: '/shop/merch',
+        name: 'Merch',
+        component: () => import(/* webpackChunkName: "merch" */ '../views/Shop/Merch.vue')
+    },
   {
     path: '/events',
     name: 'Events',
