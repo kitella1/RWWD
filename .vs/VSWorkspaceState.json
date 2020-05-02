@@ -1,16 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
-    "\\src\\assets",
-    "\\src\\assets\\images",
     "\\src\\components",
     "\\src\\components\\KidzZone",
     "\\src\\components\\Shop",
-    "\\src\\router",
     "\\src\\views",
     "\\src\\views\\Shop"
   ],
-  "SelectedNode": "\\src\\assets\\images\\appleMuffin.png",
+  "SelectedNode": "\\src\\components\\KidzZone\\Facts.vue",
   "PreviewInSolutionExplorer": false
 }

@@ -7,3 +7,21 @@
         <router-link @click.native="setActivePage('shop')" to="/shop/merch">Merchandise</router-link>
     </div>
 </template>
+
+<script>
+    import store from "../store/index";
+    import { mapState, mapGetters } from "vuex";
+export default {
+  name: "shop",
+  props: {},
+  methods: {
+    setActivePage: function(pageName) {
+      this.$store.dispatch("pageChange", pageName);
+    }
+  },
+  computed: {
+    ...mapState(["activePage"]),
+    ...mapGetters(["currentPage"])
+  }
+};
+</script>
