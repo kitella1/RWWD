@@ -1,19 +1,16 @@
 <template>
     <div id="juice">
         <h1>Juices</h1>
-        <ShopItem image="juice/apple" title="Apple Juice" description="Tasty, crisp, and sweet." price='3' currency="UK"/>
-        <ShopItem image="juice/orange" title="Orange Juice" description="Tangy and fresh." price='3' currency="UK"/>
-        <ShopItem image="juice/rasp" title="Raspberry Juice" description="Sticky sweet goodness." price='3' currency="UK"/>
-        <ShopItem image="juice/strawb" title="Strawberry Juice" description="Beautiful berry goodness" price='3' currency="UK"/>
+        <GetData url="https://studentweb.staffs.ac.uk/a010743g/mcintireFruits/wp-json/wp/v2/shop_items?_embed=wp:term,wp:featuredmedia&item_type=13"/>
     </div>
 </template>
 
 <script>
-    import ShopItem from "@/components/Shop/ShopItem";
+    import GetData from "@/components/Shop/GetData";
 
 export default {
   components: {
-            ShopItem
+            GetData
         }
 };
 </script>

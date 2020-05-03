@@ -1,7 +1,6 @@
 <template>
     <div id="merch">
         <ShopItem v-for="(item, index) in jsonRes" :key="index" :item="item" />
-        <!-- <ShopItem image="merch/mug" title="McIntire Fruits Mug" description="Perfect for any beverage." price='5' currency="UK" />-->
     </div>
 </template>
 
@@ -24,6 +23,7 @@ export default {
         fetch(this.url)
         .then(stream => stream.json())
         .then(data => (this.jsonRes = data))
+        .then(data => console.log(data))
         .catch(error => console.log(error));
     }
   },

@@ -1,10 +1,9 @@
 <template>
     <div class="shopItem">
-        <!-- <img id="image" :src="require(`@/assets/images/${image}.png`)" /> -->
         <h3>{{ item.title.rendered }} </h3>
-        <!-- <p>{{ shopItem.content.rendered }}</p>
-        <p v-if="currency === 'UK'">&#163;{{ price }}</p>
-        <p v-else-if="currency === 'US'">&#36;{{ price }}</p> -->
+        <img id="image" :src="item._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url" />
+        <p>{{ item.acf.description }}</p>
+        <p>£{{ item.acf.price }}</p>
     </div>
 </template>
 

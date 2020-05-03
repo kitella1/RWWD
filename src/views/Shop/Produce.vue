@@ -1,20 +1,16 @@
 <template>
     <div id="produce">
         <h1>Produce</h1>
-        <ShopItem image="produce/apples" title="Apples" description="Grown seasonally." price='2 per punnet' currency="UK" />
-        <ShopItem image="produce/bb" title="Blackberries" description="Grown seasonally." price='3 per punnet' currency="UK" />
-        <ShopItem image="produce/cherries" title="Cherries" description="Grown seasonally." price='3 per punnet' currency="UK" />
-        <ShopItem image="produce/rasp" title="Raspberries" description="Grown seasonally." price='1.50 per punnet' currency="UK" />
-        <ShopItem image="produce/strawb" title="Strawberries" description="Grown seasonally." price='1.50 per punnet' currency="UK" />
+        <GetData url="https://studentweb.staffs.ac.uk/a010743g/mcintireFruits/wp-json/wp/v2/shop_items?_embed=wp:term,wp:featuredmedia&item_type=11"/>
     </div>
 </template>
 
 <script>
-    import ShopItem from "@/components/Shop/ShopItem";
+    import GetData from "@/components/Shop/GetData";
 
 export default {
   components: {
-            ShopItem
+            GetData
         }
 };
 </script>

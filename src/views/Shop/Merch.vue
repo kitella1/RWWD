@@ -2,10 +2,6 @@
     <div id="merch">
         <h1>Merchandise</h1>
         <GetData url="https://studentweb.staffs.ac.uk/a010743g/mcintireFruits/wp-json/wp/v2/shop_items?_embed=wp:term,wp:featuredmedia&item_type=12"/>
-        <!-- <ShopItem image="merch/mug" title="McIntire Fruits Mug" description="Perfect for any beverage." price='5' currency="UK" />
-        <ShopItem image="merch/hoodie" title="McIntire Fruits Hoodie" description="Cosy and snug." price='20' currency="UK" />
-        <ShopItem image="merch/shirt" title="McIntire Fruits Shirt" description="Stylish and comfortable. 100% organic cotton" price='15' currency="UK" />
-        <ShopItem image="merch/hat" title="McIntire Fruits Cap" description="Keep that summer sunshine out of your eyes." price='8' currency="UK" /> -->
     </div>
 </template>
 
