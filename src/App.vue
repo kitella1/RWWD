@@ -14,7 +14,7 @@
                 <router-link to="/about">About</router-link>|
                 <router-link to="/shop">Shop</router-link>|
                 <router-link to="/kids">Kidz Zone</router-link>|
-                <router-link to="/events">Events</router-link>|
+                <router-link to="/events">Events</router-link>
             </div>
             <router-view />
             <Footer />
