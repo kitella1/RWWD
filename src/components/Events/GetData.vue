@@ -1,17 +1,17 @@
 <template>
     <div id="merch">
-        <ShopItem v-for="(item, index) in jsonRes" :key="index" :item="item" />
+        <EventItem v-for="(item, index) in jsonRes" :key="index" :event="item" />
     </div>
 </template>
 
 <script>
-    import ShopItem from "@/components/Shop/ShopItem";
+    import EventItem from "@/components/Events/EventItem";
 
 export default {
     name: "GetData",
     props: ["url"],
   components: {
-            ShopItem
+            EventItem
         },
   data() {
     return {
