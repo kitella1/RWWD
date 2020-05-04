@@ -35,9 +35,9 @@
         color: #2c3e50;
     }
 
-        #app > div {
-            margin: 8px;
-        }
+        // #app > div {
+        //     margin: 8px;
+        // }
 
     body {
         margin: 0;
