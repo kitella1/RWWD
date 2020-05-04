@@ -1,8 +1,18 @@
 <template>
-    <div id="merch">
+    <div id="eventData">
         <EventItem v-for="(item, index) in jsonRes" :key="index" :event="item" />
     </div>
 </template>
+
+<style>
+@media only screen and (min-width: 320px) {
+    #eventData {
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 
 <script>
     import EventItem from "@/components/Events/EventItem";

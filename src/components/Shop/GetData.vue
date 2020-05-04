@@ -1,8 +1,18 @@
 <template>
-    <div id="merch">
+    <div id="shopData">
         <ShopItem v-for="(item, index) in jsonRes" :key="index" :item="item" />
     </div>
 </template>
+
+<style>
+@media only screen and (min-width: 320px) {
+    #shopData {
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 
 <script>
     import ShopItem from "@/components/Shop/ShopItem";
