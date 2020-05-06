@@ -1,21 +1,25 @@
 <template>
-    <div id="kids">
+<div id="wrapper">
+    <div id="kids">        
         <img id="splash" src="@/assets/images/fruitsplash.png"/>
         <h1>Kidz Zone</h1>
-        <div class="buttonGrid">
-        <button id="gamesButton" class="button" v-scroll-to="'#fruitGame'">            
-            <p>Games</p>
-        </button>               
-        <img id="dice" src="@/assets/images/dice.png" role="presentation" alt="cartoon graphics of dice"/>     
+        <div id="buttons">
+            <div class="buttonGrid">
+                <button id="gamesButton" class="button" v-scroll-to="'#fruitGame'">            
+                    <p>Games</p>
+                </button>               
+                <img id="dice" src="@/assets/images/dice.png" role="presentation" alt="cartoon graphics of dice"/>     
             </div>
             <div class="buttonGrid">
-        <button id="factsButton" class="button" v-scroll-to="'#facts'">            
-            <p>Fun Facts</p>
-        </button>               
-        <img id="bulb" src="@/assets/images/lightbulb.png" role="presentation" alt="cartoon graphics of a lightbulb"/>     
+                <button id="factsButton" class="button" v-scroll-to="'#facts'">            
+                    <p>Fun Facts</p>
+                </button>               
+                <img id="bulb" src="@/assets/images/lightbulb.png" role="presentation" alt="cartoon graphics of a lightbulb"/>     
             </div>
+        </div>
         <Facts id="facts" />
         <Game id="fruitGame" />
+    </div>
     </div>
 </template>
 
@@ -28,6 +32,18 @@
 }
 
 @media only screen and (min-width: 200px) {
+    #wrapper {
+        width: 100vw;
+        height: 100%;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        background-image: url('~@/assets/images/sun.png');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     h1 {
         margin-top: 0;
         font-size: 3em;
@@ -36,10 +52,18 @@
 #kids {
     background: #454E9E;
     padding-bottom: 5em;
+    box-shadow: -50px 0 50px -50px #333, 50px 0 50px -50px #333;
 }
 
 #splash {
     width: 100%;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: space-around;
 }
 
 .buttonGrid {
@@ -85,6 +109,33 @@
 #bulb {
     width: 50%;    
 }
+
+}
+
+@media only screen and (min-width: 500px) {
+    #buttons {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 30vh;
+    }
+
+    .buttonGrid {
+        width: 50%;
+    }
+
+    #gamesButton p, #factsButton p {
+    font-size: 2em;
+}
+}
+@media only screen and (min-width: 1000px) {
+    #kids {
+        padding-top: 5em;
+        width: 70vw;
+    }
+    #splash {
+        display: none;
+    }
 
 }
 </style>

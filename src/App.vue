@@ -12,12 +12,12 @@
         </header>
         <mq-layout :mq="['smallMobile', 'mobile']">
             <router-view />
-            <Footer v-if="this.activePage != 'kids'" />
+            <Footer />
             <MobileNavBar />
         </mq-layout>
         <mq-layout mq="tablet+">            
             <router-view />
-            <Footer v-if="this.activePage != 'kids'" />
+            <Footer/>
         </mq-layout>
     </div>
 </template>
@@ -26,12 +26,15 @@
 
 @media only screen and (min-width: 200px) {
     #logo {
-        width: 20vw;
+        width: 15vw;
+        padding: 1em;
         height: auto;
     }
 
 header {
     padding-top: 1em;
+    background: white;
+    width: 100%;
 }
     #app {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -89,7 +92,7 @@ header {
     }
     @media only screen and (min-width: 1000px) {
         #logo {
-            width: 5vw;
+            width: 3.5vw;
         }
 
         #nav {

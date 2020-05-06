@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 Vue.use(VueMq, {
   breakpoints: { // default breakpoints - customize this
     smallMobile: 350,
-    mobile: 750,
+    mobile: 670,
     tablet: 1250,
     desktop: Infinity,
   },
