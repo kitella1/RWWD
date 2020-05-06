@@ -193,6 +193,7 @@
      bottom: 0;
      width: 100vw;
      box-shadow: 0px 1px 25px 0px $shadow;
+     z-index: 100;
   }
 
   .navIcon {

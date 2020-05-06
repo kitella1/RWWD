@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <header>
-            <router-link to="/"><img id="logo" alt="Mcintire Fruits logo" src="@/assets/images/logo-1x.png"></router-link>
+        <header v-if="this.activePage != 'kids'">
+            <router-link to="/"><img id="logo"  alt="Mcintire Fruits logo" src="@/assets/images/logo-1x.png"></router-link>
             <div id="nav">
                 <router-link to="/" >Home</router-link>|
                 <router-link to="/about">About</router-link>|
@@ -12,12 +12,12 @@
         </header>
         <mq-layout :mq="['smallMobile', 'mobile']">
             <router-view />
-            <Footer/>
+            <Footer v-if="this.activePage != 'kids'" />
             <MobileNavBar />
         </mq-layout>
         <mq-layout mq="tablet+">            
             <router-view />
-            <Footer />
+            <Footer v-if="this.activePage != 'kids'" />
         </mq-layout>
     </div>
 </template>
@@ -34,7 +34,7 @@ header {
     padding-top: 1em;
 }
     #app {
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
@@ -101,15 +101,22 @@ header {
 <script>
     import MobileNavBar from "@/components/MobileNavbar.vue";
     import Footer from "@/components/Footer.vue";
+    import store from "@/store/index";
+    import { mapState, mapGetters } from "vuex";
+
 export default {
   components: {
         MobileNavBar,
       Footer
   },
-  computed: {
+  methods: {
     setActivePage: function(pageName) {
-      this.$store.commit("setActivePage", pageName);
+      this.$store.dispatch("pageChange", pageName);
     }
+  },
+  computed: {
+    ...mapState(["activePage"]),
+    ...mapGetters(["currentPage"])
   }
 };
 </script>

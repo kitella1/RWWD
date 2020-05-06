@@ -1,5 +1,5 @@
 <template>
-    <footer id="footer">
+    <footer id="footer" v-if="this.activePage != 'kids'">
         <button @click="toggleHours()">
             <p>Opening Hours</p>  
             <ul v-if="showHours" class="column">
@@ -126,6 +126,9 @@
 </style>
 
 <script>
+    import store from "@/store/index";
+    import { mapState, mapGetters } from "vuex";
+
 export default {
     name: "Footer",
     data: function () {
@@ -137,6 +140,9 @@ export default {
         }   
     },
     methods: {
+        setActivePage: function(pageName) {
+      this.$store.dispatch("pageChange", pageName);
+    },
         toggleAddress: function(){
             this.showAddress = !this.showAddress;
             this.showContact = false;
@@ -161,6 +167,10 @@ export default {
             this.showAddress = false;
             this.showHours = false;
         },
-    }
+    },
+  computed: {
+    ...mapState(["activePage"]),
+    ...mapGetters(["currentPage"])
+  }
 }
 </script>
