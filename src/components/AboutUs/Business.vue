@@ -30,3 +30,36 @@
         </ul>
     </div>
 </template>
+
+<style lang="scss" scoped>
+@media only screen and (min-width: 200px) {
+    #business {
+        background: $secondary;
+        color: $white;
+        padding: 1.5em;
+    }
+
+    ul {
+        text-align: left;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    li {
+        padding: 0.5em 0em;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #business {
+        padding: 2em 5em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #business {
+        padding-left: 25vw;
+                padding-right: 25vw;
+    }
+}
+</style>

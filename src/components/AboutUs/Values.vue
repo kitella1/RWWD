@@ -16,3 +16,23 @@
         </p>
     </div>
 </template>
+
+<style lang="scss" scoped>
+@media only screen and (min-width: 200px) {
+#values {
+        padding: 2em;
+    }
+}
+@media only screen and (min-width: 700px) {
+    #values {
+        padding: 2em 5em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #values {
+        padding-left: 25vw;
+                padding-right: 25vw;
+    }
+}
+</style>

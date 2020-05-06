@@ -225,59 +225,6 @@
     }
   }
 }
-
-// @media only screen and (min-width: 200px) {
-//   a,
-//   a:link,
-//   a:visited,
-//   a:hover,
-//   a:active {
-//     color: $primaryColour;
-//     text-decoration: none;
-//   }
-
-//   #nav {
-//     background: #fff;
-//     display: flex;
-//     justify-content: space-around;
-//     position: fixed;
-//     bottom: 0;
-//     box-shadow: 0px 6px 24px 6px $shadowColour;
-//     width: 100vw;
-//     height: inherit;
-//     margin: 0;
-//     a {
-//       font-weight: bold;
-//       stroke: $secondaryGrey;
-//       &.router-link-exact-active {
-//         fill: $secondaryColour;
-//         color: $secondaryColour;
-//       }
-//     }
-//   }
-
-//   p {
-//     font-size: 3.5vw;
-//     padding: 0;
-//     margin: 0;
-//     padding-bottom: 0.4em;
-//   }
-
-//   .navIcon {
-//     padding-top: 0.5em;
-//     padding-bottom: 0em;
-//     width: 1.5em;
-//     height: auto;
-//   }
-// }
-// @media only screen and (min-width: 450px) {
-//   #nav {
-//     height: 60px;
-//     p {
-//       font-size: 13.5px;
-//     }
-//   }
-// }
 </style>
 
 <script>

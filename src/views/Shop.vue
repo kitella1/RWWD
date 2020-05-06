@@ -63,6 +63,28 @@
     text-align: left;
   }
 }
+@media only screen and (min-width: 700px) {
+  #shop {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                align-items: center;
+                padding: 0em 5em;
+            }
+            h1 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  #shop {
+    padding-left: 15vw;
+            padding-right: 15vw;
+            padding-bottom: 5vh;
+  }
+ 
+}
 </style>
 
 <script>

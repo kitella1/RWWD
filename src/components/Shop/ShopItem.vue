@@ -16,6 +16,8 @@
         text-align: start;
         width: 70%;
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
         flex-direction: column;
         margin-bottom: 2em;
     }
@@ -31,14 +33,30 @@
         padding-top: 0.4em;
     }
     .image {
-        width: 100%;
-        height: auto;    
-        //background: rgb(216, 216, 216);
+        height: auto;
+        width: auto;
+        max-height: 200px;
+        max-width: 200px;
+        object-fit: cover; 
     }
     .description {
         text-align: justify;
         font-size: 0.88em;
         padding-top: 0.5em;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .shopItem {        
+        margin-bottom: 0em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image {
+        height: auto;
+        width: auto;
+        max-height: 200px;
+        max-width: 200px;
     }
 }
 </style>

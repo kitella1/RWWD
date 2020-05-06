@@ -12,6 +12,14 @@
         align-items: center;
     }
 }
+
+
+@media only screen and (min-width: 1000px) {
+    #eventData {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+}
 </style>
 
 <script>

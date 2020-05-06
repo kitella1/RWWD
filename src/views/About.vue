@@ -8,6 +8,10 @@
   </div>
 </template>
 
+<style lang="scss" scoped>
+  
+</style>
+
 <script>
     import History from "@/components/AboutUs/History.vue";
     import Values from "@/components/AboutUs/Values.vue";

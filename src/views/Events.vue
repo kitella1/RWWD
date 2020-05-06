@@ -16,6 +16,7 @@
 </template>
 
 <style lang="scss" scoped>
+@media only screen and (min-width: 200px) {
 #adultToggle {
     margin-bottom: 1em;
     display: flex;
@@ -31,8 +32,7 @@ aside {
 #label {
     margin-bottom: 0.6em;
 }
-</style>>
-
+}
 </style>
 
 <script>

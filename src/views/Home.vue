@@ -1,18 +1,24 @@
 <template>
   <div id="home">
-    <h1>This is the home page</h1>
+      <Hero/>
+      <About/>
   </div>
 </template>
 
-<style scoped lang="scss">
-    
+<style lang="scss" scoped>
+
 </style>
 
 <script>
+  import Hero from "@/components/Home/Hero.vue"
+  import About from "@/components/Home/About.vue";
 
 export default {
-  name: 'Home',
   components: {
+    About,
+    Hero
   }
-}
+};
 </script>
+
+

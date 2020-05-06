@@ -12,6 +12,25 @@
         align-items: center;
     }
 }
+
+@media only screen and (min-width: 700px) {
+  #shopData {
+           display: grid;
+                grid-template-columns: 50% 50%;
+                align-items: center;
+                justify-items: center;
+                padding: 2em 5em;
+                column-gap: 2em;
+                row-gap: 2em;
+            }
+            
+}
+@media only screen and (min-width: 1000px) {
+  #shopData {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+}
 </style>
 
 <script>
