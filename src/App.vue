@@ -1,6 +1,15 @@
 <template>
     <div id="app">
         <header v-if="this.activePage != 'kids'">
+            
+            <div id="details">
+                    <p>Monday to Friday - 10:00 to 16:00</p>
+            <p>Saturday and Sunday - 11:00 to 14:00</p>
+                    <p>Telephone: <a href="tel:+441334123456">+44 (0) 1334 12 34 56</a></p>
+            <img src="@/assets/images/gb.png" v-if="activeCountry === 'US'" @click="setActiveCountry('UK')" class="flag" alt="The British flag" width="500" height="333">
+            <img src="@/assets/images/us.png" v-if="activeCountry === 'UK'" @click="setActiveCountry('US')" class="flag" alt="The American flag" width="500" height="333">
+            </div>
+            <div id="main">
             <router-link to="/"><img id="logo"  alt="Mcintire Fruits logo" src="@/assets/images/logo-1x.png"></router-link>
             <div id="nav">
                 <router-link to="/" >Home</router-link>|
@@ -8,6 +17,7 @@
                 <router-link to="/shop">Shop</router-link>|
                 <router-link to="/kids">Kidz Zone</router-link>|
                 <router-link to="/events">Events</router-link>
+            </div>
             </div>
         </header>
         <mq-layout :mq="['smallMobile', 'mobile']">
@@ -32,9 +42,10 @@
     }
 
 header {
-    padding-top: 1em;
+    padding-top: 0.5em;
     background: white;
     width: 100%;
+    box-shadow: 0px -20px 37px 0px rgba(0,0,0,0.75);
 }
     #app {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -58,12 +69,34 @@ header {
             width: 10vw;
             margin-left: 3em;
     }
-    header {
+    #main {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
+
+.flag {
+    width: 30px;
+    height: 20px;
+}
+
+
+#details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#details p {
+    margin: 0;
+    font-size: 0.6em;
+}
+
+#opening {
+    display: flex; 
+    justify-content: space-evenly;
+}
     #nav {
   display: flex;
   justify-content: space-between;
@@ -115,11 +148,14 @@ export default {
   methods: {
     setActivePage: function(pageName) {
       this.$store.dispatch("pageChange", pageName);
+    },
+    setActiveCountry: function(countryCode) {
+      this.$store.dispatch("countryChange", countryCode);
     }
   },
   computed: {
-    ...mapState(["activePage"]),
-    ...mapGetters(["currentPage"])
+    ...mapState(["activePage", "activeCountry"]),
+    ...mapGetters(["currentPage", "currentCountry"])
   }
 };
 </script>

@@ -2,7 +2,8 @@
     <div class="shopItem">
         <img class="image" :src="item._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url" :width="item._embedded['wp:featuredmedia'][0].media_details.width" :height="item._embedded['wp:featuredmedia'][0].media_details.height" />        
         <h3>{{ item.title.rendered }} </h3>        
-        <p class="price"><span class="bold">Price:</span> £{{ item.acf.price }}</p>
+        <p class="price" v-if="activeCountry === 'US'"><span class="bold">Price:</span> ${{ item.acf.USprice }}</p>
+        <p class="price" v-if="activeCountry === 'UK'"><span class="bold">Price:</span> £{{ item.acf.UKprice }}</p>
         <p class="description">{{ item.acf.description }}</p>
     </div>
 </template>
@@ -62,8 +63,19 @@
 </style>
 
 <script>
+    import store from "@/store/index";
+    import { mapState, mapGetters } from "vuex";
     export default {
         name: 'shopItem',
-        props: ["item"]
+        props: ["item"],
+        methods: {
+            setActiveCountry: function(countryCode) {
+                this.$store.dispatch("countryChange", countryCode);
+            }
+        },
+  computed: {
+    ...mapState(["activeCountry"]),
+    ...mapGetters(["currentCountry"])
+  }
     }
 </script>
