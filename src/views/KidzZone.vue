@@ -35,6 +35,7 @@
 
 #kids {
     background: #454E9E;
+    padding-bottom: 5em;
 }
 
 #splash {

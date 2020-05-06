@@ -117,13 +117,11 @@ export default {
     toggleFact: function(factNum) {
         if(this.facts[factNum].visible === "Yes")
         {
-            console.log(factNum)
             this.facts[factNum].visible = "Pending animation"
             setTimeout(() => {  this.facts[factNum].visible = "No"; }, 500);    
         }
         else if(this.facts[factNum].visible === "No")
         {
-            console.log(factNum)
             this.facts[factNum].visible = "Pending animation"
             setTimeout(() => {  this.facts[factNum].visible = "Yes"; }, 500);    
         }
