@@ -142,12 +142,26 @@
 
 <script>
     import Facts from "@/components/KidzZone/Facts.vue";
-    import Game from "@/components/KidzZone/Game.vue";
+    import Game from "@/components/KidzZone/Game.vue";    
+    import store from "../store/index";
+    import { mapState, mapGetters } from "vuex";
 
     export default {
         components: {
             Facts,
             Game
+        },
+        methods: {
+            setActivePage: function(pageName) {
+                this.$store.dispatch("pageChange", pageName);
+            }
+        },
+        created() {
+            this.setActivePage('kids');
+        },
+        computed: {
+            ...mapState(["activePage"]),
+            ...mapGetters(["currentPage"])
         }
     };
 </script>

@@ -25,7 +25,7 @@
         <img class="image" src="@/assets/images/cow.jpg" alt="a cow in a field" />
         <div class="paragraph">
           <h2>Scottish Roots</h2>
-          <p>McIntire Fruits was born and continues to grow in the heart of Edinburgh. Even as we expand, McIntire Fruits remain faithful to our Scottish Lowlands heritage. New farms are opening globally so keep an eye out for the McIntire brand where you are too.</p>
+          <p>McIntire Fruits was born and continues to grow in the heart of Scotland. Even as we expand, McIntire Fruits remain faithful to our Scottish Lowlands heritage. New farms are opening globally so keep an eye out for the McIntire brand where you are too.</p>
           <router-link
             class="routerButton"
             @click.native="setActivePage('events')"
@@ -35,7 +35,7 @@
         <img class="image" src="@/assets/images/child.jpg" alt="a pile of apples" />
         <div class="paragraph">
           <h2>Family Friendly</h2>
-          <p>While we're open to all ages, McIntire Fruits pride ourselves on welcoming even the smallest of farmers. Whether you're 5, 15, or 50, there's bound to find something for everyone.</p>
+          <p>While we're open to all ages, McIntire Fruits pride ourselves on welcoming even the smallest of farmers. Whether you're 5, 15, or 50, there's bound to be something for everyone.</p>
           <router-link
             class="routerButton"
             @click.native="setActivePage('kids')"
@@ -88,11 +88,9 @@
             letter-spacing: 4px;
             font-size: 2em;
         }
-    }
 
-    @media only screen and (min-width: 700px) {
-        h1 {
-            font-size: 3em;
+        #grid {
+            width: 60%;
         }
 
         #about {
@@ -101,6 +99,19 @@
             align-items: center;
             padding: 0;
         }
+
+
+        .image {
+          border-radius: 5px;
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        h1 {
+            font-size: 3em;
+        }
+
+        
 
         #grid {
             display: grid;
@@ -115,7 +126,6 @@
         }
 
         .image {
-            border-radius: 5px;
             width: 100%;
             align-self: center;
         }

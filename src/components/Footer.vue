@@ -13,7 +13,8 @@
             <ul v-if="showContact" class="column">
                 <li><h2>Contact Us</h2></li>
                 <li><p>E-mail: <a href="mailto:enquiries@mcintirefruit.org">enquiries@mcintirefruit.org</a></p></li>
-                <li><p>Telephone: <a href="tel:+441334123456">+44 (0) 1334 12 34 56</a></p></li>
+                <li v-if="activeCountry === 'UK'"><p>Telephone: <a href="tel:+441334123456">+44 (0) 1334 12 34 56</a></p></li>
+                <li v-if="activeCountry === 'US'"><p>Telephone: <a href="tel:+19277723645">+1 927 772 3645</a></p></li>
             </ul>
         </button> 
         <button @click="toggleSitemap()">
@@ -169,8 +170,8 @@ export default {
         },
     },
   computed: {
-    ...mapState(["activePage"]),
-    ...mapGetters(["currentPage"])
+    ...mapState(["activePage", "activeCountry"]),
+    ...mapGetters(["currentPage", "currentCountry"])
   }
 }
 </script>
