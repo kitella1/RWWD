@@ -1,26 +1,24 @@
 <template>
-  <div class="home">
-    <img id="logo" alt="Mcintire Fruits logo" src="../assets/logo.png">
-    <Landing msg="Welcome to Your Vue.js App"/>
+  <div id="home">
+      <Hero/>
+      <About/>
   </div>
 </template>
 
-<style scoped lang="scss">
-#logo
-{
-  width: 20vw;
-  height: auto;
-}
+<style lang="scss" scoped>
+
 </style>
 
 <script>
-// @ is an alias to /src
-import Landing from '@/components/Landing.vue'
+  import Hero from "@/components/Home/Hero.vue"
+  import About from "@/components/Home/About.vue";
 
 export default {
-  name: 'Home',
   components: {
-    Landing
+    About,
+    Hero
   }
-}
+};
 </script>
+
+
