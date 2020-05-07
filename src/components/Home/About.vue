@@ -99,8 +99,6 @@
             align-items: center;
             padding: 0;
         }
-
-
         .image {
           border-radius: 5px;
         }

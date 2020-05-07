@@ -1,7 +1,7 @@
 <template>
     <div id="history">
         <h2>Our History</h2>   
-        <img src="@/assets/images/molly.png" width="1925" height="2500" alt="A black and white picture of Molly McIntire in blue dungarees"/>     
+        <img src="@/assets/images/molly.jpg" width="1925" height="2500" alt="A black and white picture of Molly McIntire in blue dungarees"/>     
         <div id="text">
         <p>
             McIntire Fruits started in 1949 as McIntire Fruit Farms. Molly McIntire and her husband maintained 3 acres of apple trees.

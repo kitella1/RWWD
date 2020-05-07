@@ -1,5 +1,5 @@
 <template>
-    <div id="nav">
+    <div class="nav">
         <router-link @click.native="setActivePage('home')" to="/">
             <svg v-if="activePage === 'home'"
                  version="1.1"
@@ -184,7 +184,7 @@
 
 <style lang="scss" scoped>
 @media only screen and (min-width: 200px) {
-  #nav {
+  .nav {
     background: $primary;
     display: flex;
      justify-content: space-around;
@@ -227,9 +227,6 @@
   }
 }
 @media only screen and (min-width: 600px) {
-  width: {
-    
-  }
 }
 </style>
 

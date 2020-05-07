@@ -6,9 +6,9 @@
         <agile id="carousel" ref="carousel" :autoplay="true" :autoplay-speed="5000" :dots="false" :navButtons="false">
           <div class="slide">
             <picture>
-                <source media="(min-width: 900px)" srcset="@/assets/images/welcomeHeaderLarge.png">
-                <source media="(min-width: 500px)" srcset="@/assets/images/welcomeHeaderMed.png">
-                <img src="@/assets/images/welcomeHeader.png" alt="Welcome to McIntire Fruit's new website">
+                <source media="(min-width: 900px)" srcset="@/assets/images/welcomeHeaderLarge.jpg">
+                <source media="(min-width: 500px)" srcset="@/assets/images/welcomeHeaderMed.jpg">
+                <img src="@/assets/images/welcomeHeader.jpg" alt="Welcome to McIntire Fruit's new website">
             </picture>
           </div>        
           <div class="slide">            
@@ -18,9 +18,9 @@
               to="/shop/merch"
             >
               <picture>
-                <source media="(min-width: 900px)" srcset="@/assets/images/merchHeaderLarge.png">
-                <source media="(min-width: 500px)" srcset="@/assets/images/merchHeaderMed.png">
-                <img src="@/assets/images/merchHeader.png" alt="New McIntire Fruits merchandise out now">
+                <source media="(min-width: 900px)" srcset="@/assets/images/merchHeaderLarge.jpg">
+                <source media="(min-width: 500px)" srcset="@/assets/images/merchHeaderMed.jpg">
+                <img src="@/assets/images/merchHeader.jpg" alt="New McIntire Fruits merchandise out now">
             </picture>
             </router-link>
           </div>
@@ -31,8 +31,8 @@
               to="/events"
             >
             <picture>
-                <source media="(min-width: 900px)" srcset="@/assets/images/berryHeaderLarge.png">
-                <source media="(min-width: 500px)" srcset="@/assets/images/berryHeaderMed.png">
+                <source media="(min-width: 900px)" srcset="@/assets/images/berryHeaderLarge.jpg">
+                <source media="(min-width: 500px)" srcset="@/assets/images/berryHeaderMed.jpg">
                 <img src="@/assets/images/berryHeader.jpg" alt="Berry bonanza">
             </picture>
             </router-link>

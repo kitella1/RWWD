@@ -11,11 +11,11 @@
                     <router-link to="/events">Events</router-link>
                 </div>
                 <p class="country" @click="setActiveCountry('UK')"  v-if="activeCountry === 'US'">
-                    <img src="@/assets/images/gb.png" class="flag" alt="The British flag" width="500" height="333">
+                    <img src="@/assets/images/gb.jpg" class="flag" alt="The British flag" width="500" height="333">
                     Go to UK site
                 </p>
                 <p class="country" @click="setActiveCountry('US')"  v-if="activeCountry === 'UK'" >
-                    <img src="@/assets/images/us.png" class="flag" alt="The American flag" width="500" height="333">
+                    <img src="@/assets/images/us.jpg" class="flag" alt="The American flag" width="500" height="333">
                     Go to US site
                 </p>
             </div>
